@@ -6,3 +6,5 @@ if [ "$#" -ne 1 ]; then
 fi
 
 cp play-dl.sh "$1"
+cp compile-mp3.sh "$1"
+cp list-url.sh "$1" 
