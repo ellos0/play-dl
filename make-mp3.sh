@@ -1,11 +1,11 @@
 #!/bin/bash
 
-cd "$1"
-
 if [ "$#" -ne 1 ]; then
   echo "Usage: $0 <directory>"
   exit 1
 fi
+
+cd "$1"
 
 for f in *.mp3; do 
   echo "file '$f'" >> files;
