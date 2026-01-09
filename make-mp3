@@ -5,12 +5,20 @@ if [ "$#" -ne 1 ]; then
   exit 1
 fi
 
+fpath="$1"
+dirnm=${fpath##*/}
+
+mp3path="$fpath/../$dirnm.mp3"
+
 cd "$1"
+touch "$mp3path"
+
+
 
 for f in *.mp3; do 
   echo "file '$f'" >> files;
 done
 
-ffmpeg -f concat -safe 0 -i files -c copy "../$1.mp3"
+ffmpeg -f concat -safe 0 -i files -c copy "$mp3path"
 
 rm "$1/files"
