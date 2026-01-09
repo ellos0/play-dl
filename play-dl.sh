@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ "$#" -ne 2 ]; then
-  echo "Usage: $0 <url> <location>"
-  exit 1
-fi
-
-mkdir -p "$2"
-yt-dlp -o "$2/%(playlist_index)s - %(title)s.%(ext)s" -x --audio-format mp3 --embed-thumbnail "$1"
