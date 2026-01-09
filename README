@@ -2,5 +2,5 @@ playlist helper tools for yt-dlp and ffmpeg
 
 to install:
 
-chmod +x build.sh
-./build.sh <binary path>
+chmod +x build
+./build <binary path>
