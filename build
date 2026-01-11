@@ -5,6 +5,5 @@ if [ "$#" -ne 1 ]; then
   exit 1
 fi
 
-cp play-dl.sh "$1"
-cp compile-mp3.sh "$1"
-cp list-url.sh "$1" 
+sudo cp play-dl "$1"
+sudo cp make-mp3 "$1"
