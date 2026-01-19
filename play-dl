@@ -6,4 +6,4 @@ if [ "$#" -ne 2 ]; then
 fi
 
 mkdir -p "$2"
-yt-dlp -o "$2/%(playlist_index)s - %(title)s.%(ext)s" -x --audio-format mp3 --embed-thumbnail "$1"
+yt-dlp --cookies-from-browser firefox -o "$2/%(playlist_index)s - %(title)s.%(ext)s" -x --audio-format mp3 --embed-thumbnail "$1"
