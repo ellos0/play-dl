@@ -7,3 +7,4 @@ fi
 
 sudo ln play-dl "$1/play-dl"
 sudo ln make-mp3 "$1/make-mp3"
+sudo ln single-dl "$1/single-dl"
