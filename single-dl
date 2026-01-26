@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne 1 ]; then
   echo "Usage: $0 <url>"
   exit 1
 fi
@@ -8,4 +8,5 @@ fi
 echo "Beginning to download song"
 
 yt-dlp -o "%(playlist_index)s - %(title)s.%(ext)s" -x --audio-format mp3 --embed-thumbnail "$1" 
-echo "Successfully downloaded song." 
+echo "Successfully downloaded song."
+exit 1
