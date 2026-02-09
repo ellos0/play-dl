@@ -1,13 +1,13 @@
 #!/bin/bash
 
 if [ "$#" -ne 2 ]; then
-  echo "Usage: $0 <url> <location>"
+  echo "Usage: $0 <location> <url>"
   exit 1
 fi
 
-mkdir -p "$2"
+mkdir -p "$1"
 
 echo "Beginning to download playlist"
 
-yt-dlp -o "$2/%(playlist_index)s - %(title)s.%(ext)s" -t mp3 --embed-thumbnail "$1"
-echo "Downloaded playlist at: $1 to: $2"
+yt-dlp  -v -o "$1/%(playlist_index)s - %(title)s.%(ext)s" -t mp3 --embed-thumbnail "$2"
+echo "Downloaded playlist at: $2 to: $1"
