@@ -2,5 +2,9 @@ playlist helper tools for yt-dlp and ffmpeg
 
 to install:
 
-chmod +x build
-./build <install-path>
+make install
+(may need password)
+
+to uninstall:
+make clean
+(may need password)
