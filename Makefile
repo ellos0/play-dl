@@ -1,10 +1,11 @@
 INSTALL_LOCATION := /usr/local/bin
-YT_DLP_CONFIG_LOCATION := ~/.config/yt-dlp
+YT_DLP_CONFIG_LOCATION := ~/.config/yt-dlp/
 
 install:
 	@sudo cp play-dl $(INSTALL_LOCATION)
 	@sudo cp single-dl $(INSTALL_LOCATION)
 	@sudo cp make-mp3 $(INSTALL_LOCATION)
+	@mkdir -p $(YT_DLP_CONFIG_LOCATION)
 	@sudo cp config $(YT_DLP_CONFIG_LOCATION)
 
 clean:
